@@ -20,7 +20,7 @@ Medium : https://medium.com/@bergerdog
 Reddit : https://www.reddit.com/user/bergerdogbsc
 Chart : https://poocoin.app/tokens/0x1947f219b1826a01325f3b0b638c93ebae9b7347
 
-# Burn
+## Burn
 
 https://bscscan.com/tx/0x8cac3def8b5dc403df0beeabcefc6ce71da8910e9b13e5e17f5bda81ce58840d
 
