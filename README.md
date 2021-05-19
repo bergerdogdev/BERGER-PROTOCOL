@@ -10,7 +10,7 @@ BergerDog protocol is a mixture of RFI tokenomics with the added function of aut
 - Platform : Binance Smart Chain (BEP20)
 - Role : Meme digital services
 - Total supply : A Quadrillion
-- Presale : 250 Trillion
+- Presale : 200 Trillion
 
 ## Social 
 
