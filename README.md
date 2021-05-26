@@ -18,7 +18,7 @@ BergerDog protocol is a mixture of RFI tokenomics with the added function of aut
 - Twitter :  https://twitter.com/BuidlBerger
 - Medium : https://medium.com/@bergerdog
 - Reddit : https://www.reddit.com/user/bergerdogbsc
-- Chart : https://poocoin.app/tokens/0x1947f219b1826a01325f3b0b638c93ebae9b7347
+- Chart : https://poocoin.app/tokens/0xDDD32d53474265a760972F4caD132c18E101BAe8
 
 ## Burn
 
