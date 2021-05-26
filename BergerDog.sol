@@ -1,8 +1,9 @@
 /**
- *Submitted for verification at BscScan.com on 2021-05-18
-*/
-
-/**
+ * 
+ * 
+ * BERGERDOG 2021 - Software BlockChain Solution 
+ * 
+ * 
 MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMhymMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNo:--/yNMMMMMMMMMMMMMMMMMMMMMMMN:-:-+NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
@@ -54,20 +55,26 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMd/oNMMMNNMsyMMMMMMMMMMMMMMMMMMMMMMM
 MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMdsNMMMMdmMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-**/
+
+/*
+    Submitted for verification at BscScan.com on 2021-05-25
+*/
+
+
 /**
 
    #BERGER DOG = MEME + NFT + DeFi
    
-   #It’s BERGERDOG on DeFi and Leading Memes token
+   #It’s BERGERDOG but DeFi and Cute
 
    #BERGER features:
    2% fee auto add to the liquidity pool to locked forever when selling
    2% fee auto distribute to all holders
    40% burn to dead wallet.
-
    
- */
+   
+ **/
+ 
 
 pragma solidity ^0.6.12;
 // SPDX-License-Identifier: Unlicensed
@@ -76,12 +83,12 @@ interface IERC20 {
     function totalSupply() external view returns (uint256);
 
     /**
-     * @dev Returns the amount of tokens owned by `account`.
+     * @dev Returns the amount of tokens owned by account.
      */
     function balanceOf(address account) external view returns (uint256);
 
     /**
-     * @dev Moves `amount` tokens from the caller's account to `recipient`.
+     * @dev Moves amount tokens from the caller's account to recipient.
      *
      * Returns a boolean value indicating whether the operation succeeded.
      *
@@ -90,8 +97,8 @@ interface IERC20 {
     function transfer(address recipient, uint256 amount) external returns (bool);
 
     /**
-     * @dev Returns the remaining number of tokens that `spender` will be
-     * allowed to spend on behalf of `owner` through {transferFrom}. This is
+     * @dev Returns the remaining number of tokens that spender will be
+     * allowed to spend on behalf of owner through {transferFrom}. This is
      * zero by default.
      *
      * This value changes when {approve} or {transferFrom} are called.
@@ -99,7 +106,7 @@ interface IERC20 {
     function allowance(address owner, address spender) external view returns (uint256);
 
     /**
-     * @dev Sets `amount` as the allowance of `spender` over the caller's tokens.
+     * @dev Sets amount as the allowance of spender over the caller's tokens.
      *
      * Returns a boolean value indicating whether the operation succeeded.
      *
@@ -115,8 +122,8 @@ interface IERC20 {
     function approve(address spender, uint256 amount) external returns (bool);
 
     /**
-     * @dev Moves `amount` tokens from `sender` to `recipient` using the
-     * allowance mechanism. `amount` is then deducted from the caller's
+     * @dev Moves amount tokens from sender to recipient using the
+     * allowance mechanism. amount is then deducted from the caller's
      * allowance.
      *
      * Returns a boolean value indicating whether the operation succeeded.
@@ -126,16 +133,16 @@ interface IERC20 {
     function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
 
     /**
-     * @dev Emitted when `value` tokens are moved from one account (`from`) to
+     * @dev Emitted when value tokens are moved from one account (`from`) to
      * another (`to`).
      *
-     * Note that `value` may be zero.
+     * Note that value may be zero.
      */
     event Transfer(address indexed from, address indexed to, uint256 value);
 
     /**
-     * @dev Emitted when the allowance of a `spender` for an `owner` is set by
-     * a call to {approve}. `value` is the new allowance.
+     * @dev Emitted when the allowance of a spender for an owner is set by
+     * a call to {approve}. value is the new allowance.
      */
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
@@ -147,9 +154,9 @@ interface IERC20 {
  * checks.
  *
  * Arithmetic operations in Solidity wrap on overflow. This can easily result
- * in bugs, because programmers usually assume that an overflow raises an
+ * in bugs, because programmers usually assume thatan overflow raises an
  * error, which is the standard behavior in high level programming languages.
- * `SafeMath` restores this intuition by reverting the transaction when an
+ * SafeMath restores this intuition by reverting the transaction when an
  * operation overflows.
  *
  * Using this library instead of the unchecked operations eliminates an entire
@@ -161,7 +168,7 @@ library SafeMath {
      * @dev Returns the addition of two unsigned integers, reverting on
      * overflow.
      *
-     * Counterpart to Solidity's `+` operator.
+     * Counterpart to Solidity's + operator.
      *
      * Requirements:
      *
@@ -178,7 +185,7 @@ library SafeMath {
      * @dev Returns the subtraction of two unsigned integers, reverting on
      * overflow (when the result is negative).
      *
-     * Counterpart to Solidity's `-` operator.
+     * Counterpart to Solidity's - operator.
      *
      * Requirements:
      *
@@ -192,7 +199,7 @@ library SafeMath {
      * @dev Returns the subtraction of two unsigned integers, reverting with custom message on
      * overflow (when the result is negative).
      *
-     * Counterpart to Solidity's `-` operator.
+     * Counterpart to Solidity's - operator.
      *
      * Requirements:
      *
@@ -209,7 +216,7 @@ library SafeMath {
      * @dev Returns the multiplication of two unsigned integers, reverting on
      * overflow.
      *
-     * Counterpart to Solidity's `*` operator.
+     * Counterpart to Solidity's * operator.
      *
      * Requirements:
      *
@@ -233,8 +240,8 @@ library SafeMath {
      * @dev Returns the integer division of two unsigned integers. Reverts on
      * division by zero. The result is rounded towards zero.
      *
-     * Counterpart to Solidity's `/` operator. Note: this function uses a
-     * `revert` opcode (which leaves remaining gas untouched) while Solidity
+     * Counterpart to Solidity's / operator. Note: this function uses a
+     * revert opcode (which leaves remaining gas untouched) while Solidity
      * uses an invalid opcode to revert (consuming all remaining gas).
      *
      * Requirements:
@@ -249,8 +256,8 @@ library SafeMath {
      * @dev Returns the integer division of two unsigned integers. Reverts with custom message on
      * division by zero. The result is rounded towards zero.
      *
-     * Counterpart to Solidity's `/` operator. Note: this function uses a
-     * `revert` opcode (which leaves remaining gas untouched) while Solidity
+     * Counterpart to Solidity's / operator. Note: this function uses a
+     * revert opcode (which leaves remaining gas untouched) while Solidity
      * uses an invalid opcode to revert (consuming all remaining gas).
      *
      * Requirements:
@@ -269,7 +276,7 @@ library SafeMath {
      * @dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),
      * Reverts when dividing by zero.
      *
-     * Counterpart to Solidity's `%` operator. This function uses a `revert`
+     * Counterpart to Solidity's % operator. This function uses a revert
      * opcode (which leaves remaining gas untouched) while Solidity uses an
      * invalid opcode to revert (consuming all remaining gas).
      *
@@ -285,7 +292,7 @@ library SafeMath {
      * @dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),
      * Reverts with custom message when dividing by zero.
      *
-     * Counterpart to Solidity's `%` operator. This function uses a `revert`
+     * Counterpart to Solidity's % operator. This function uses a revert
      * opcode (which leaves remaining gas untouched) while Solidity uses an
      * invalid opcode to revert (consuming all remaining gas).
      *
@@ -316,14 +323,14 @@ abstract contract Context {
  */
 library Address {
     /**
-     * @dev Returns true if `account` is a contract.
+     * @dev Returns true if account is a contract.
      *
      * [IMPORTANT]
      * ====
      * It is unsafe to assume that an address for which this function returns
      * false is an externally-owned account (EOA) and not a contract.
      *
-     * Among others, `isContract` will return false for the following
+     * Among others, isContract will return false for the following
      * types of addresses:
      *
      *  - an externally-owned account
@@ -335,7 +342,7 @@ library Address {
     function isContract(address account) internal view returns (bool) {
         // According to EIP-1052, 0x0 is the value returned for not-yet created accounts
         // and 0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470 is returned
-        // for accounts without code, i.e. `keccak256('')`
+        // for accounts without code, i.e. keccak256('')
         bytes32 codehash;
         bytes32 accountHash = 0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470;
         // solhint-disable-next-line no-inline-assembly
@@ -344,17 +351,17 @@ library Address {
     }
 
     /**
-     * @dev Replacement for Solidity's `transfer`: sends `amount` wei to
-     * `recipient`, forwarding all available gas and reverting on errors.
+     * @dev Replacement for Solidity's transfer: sends amount wei to
+     * recipient, forwarding all available gas and reverting on errors.
      *
      * https://eips.ethereum.org/EIPS/eip-1884[EIP1884] increases the gas cost
      * of certain opcodes, possibly making contracts go over the 2300 gas limit
-     * imposed by `transfer`, making them unable to receive funds via
-     * `transfer`. {sendValue} removes this limitation.
+     * imposed by transfer, making them unable to receive funds via
+     * transfer. {sendValue} removes this limitation.
      *
      * https://diligence.consensys.net/posts/2019/09/stop-using-soliditys-transfer-now/[Learn more].
      *
-     * IMPORTANT: because control is transferred to `recipient`, care must be
+     * IMPORTANT: because control is transferred to recipient, care must be
      * taken to not create reentrancy vulnerabilities. Consider using
      * {ReentrancyGuard} or the
      * https://solidity.readthedocs.io/en/v0.5.11/security-considerations.html#use-the-checks-effects-interactions-pattern[checks-effects-interactions pattern].
@@ -368,11 +375,11 @@ library Address {
     }
 
     /**
-     * @dev Performs a Solidity function call using a low level `call`. A
+     * @dev Performs a Solidity function call using a low level call. A
      * plain`call` is an unsafe replacement for a function call: use this
      * function instead.
      *
-     * If `target` reverts with a revert reason, it is bubbled up by this
+     * If target reverts with a revert reason, it is bubbled up by this
      * function (like regular Solidity function calls).
      *
      * Returns the raw returned data. To convert to the expected return value,
@@ -380,8 +387,8 @@ library Address {
      *
      * Requirements:
      *
-     * - `target` must be a contract.
-     * - calling `target` with `data` must not revert.
+     * - target must be a contract.
+     * - calling target with data must not revert.
      *
      * _Available since v3.1._
      */
@@ -391,7 +398,7 @@ library Address {
 
     /**
      * @dev Same as {xref-Address-functionCall-address-bytes-}[`functionCall`], but with
-     * `errorMessage` as a fallback revert reason when `target` reverts.
+     * errorMessage as a fallback revert reason when target reverts.
      *
      * _Available since v3.1._
      */
@@ -401,12 +408,12 @@ library Address {
 
     /**
      * @dev Same as {xref-Address-functionCall-address-bytes-}[`functionCall`],
-     * but also transferring `value` wei to `target`.
+     * but also transferring value wei to target.
      *
      * Requirements:
      *
-     * - the calling contract must have an ETH balance of at least `value`.
-     * - the called Solidity function must be `payable`.
+     * - the calling contract must have an ETH balance of at least value.
+     * - the called Solidity function must be payable.
      *
      * _Available since v3.1._
      */
@@ -416,7 +423,7 @@ library Address {
 
     /**
      * @dev Same as {xref-Address-functionCallWithValue-address-bytes-uint256-}[`functionCallWithValue`], but
-     * with `errorMessage` as a fallback revert reason when `target` reverts.
+     * with errorMessage as a fallback revert reason when target reverts.
      *
      * _Available since v3.1._
      */
@@ -458,7 +465,7 @@ library Address {
  * can later be changed with {transferOwnership}.
  *
  * This module is used through inheritance. It will make available the modifier
- * `onlyOwner`, which can be applied to your functions to restrict their use to
+ * onlyOwner, which can be applied to your functions to restrict their use to
  * the owner.
  */
 contract Ownable is Context {
@@ -474,8 +481,7 @@ contract Ownable is Context {
     constructor () internal {
         address msgSender = _msgSender();
         _owner = msgSender;
-        emit OwnershipTransferred(address(0), msgSender);
-    }
+        emit OwnershipTransferred(address(0), msgSender);}
 
     /**
      * @dev Returns the address of the current owner.
@@ -494,7 +500,7 @@ contract Ownable is Context {
 
      /**
      * @dev Leaves the contract without owner. It will not be possible to call
-     * `onlyOwner` functions anymore. Can only be called by the current owner.
+     * onlyOwner functions anymore. Can only be called by the current owner.
      *
      * NOTE: Renouncing ownership will leave the contract without an owner,
      * thereby removing any functionality that is only available to the owner.
@@ -537,7 +543,7 @@ contract Ownable is Context {
 
 // pragma solidity >=0.5.0;
 
-interface IUniswapV2Factory {
+interface IPancakeswapV2Factory {
     event PairCreated(address indexed token0, address indexed token1, address pair, uint);
 
     function feeTo() external view returns (address);
@@ -556,7 +562,7 @@ interface IUniswapV2Factory {
 
 // pragma solidity >=0.5.0;
 
-interface IUniswapV2Pair {
+interface IPancakeswapV2Pair {
     event Approval(address indexed owner, address indexed spender, uint value);
     event Transfer(address indexed from, address indexed to, uint value);
 
@@ -584,8 +590,7 @@ interface IUniswapV2Pair {
         uint amount0In,
         uint amount1In,
         uint amount0Out,
-        uint amount1Out,
-        address indexed to
+        uint amount1Out,address indexed to
     );
     event Sync(uint112 reserve0, uint112 reserve1);
 
@@ -609,7 +614,7 @@ interface IUniswapV2Pair {
 
 // pragma solidity >=0.6.2;
 
-interface IUniswapV2Router01 {
+interface IPancakeswapV2Router01 {
     function factory() external pure returns (address);
     function WETH() external pure returns (address);
 
@@ -707,7 +712,7 @@ interface IUniswapV2Router01 {
 
 // pragma solidity >=0.6.2;
 
-interface IUniswapV2Router02 is IUniswapV2Router01 {
+interface IPancakeswapV2Router02 is IPancakeswapV2Router01 {
     function removeLiquidityETHSupportingFeeOnTransferTokens(
         address token,
         uint liquidity,
@@ -777,8 +782,8 @@ contract BERGERDOG is Context, IERC20, Ownable {
     uint256 public _liquidityFee = 2;
     uint256 private _previousLiquidityFee = _liquidityFee;
 
-    IUniswapV2Router02 public immutable uniswapV2Router;
-    address public immutable uniswapV2Pair;
+    IPancakeswapV2Router02 public immutable pancakeswapV2Router;
+    address public immutable pancakeswapV2Pair;
     
     bool inSwapAndLiquify;
     bool public swapAndLiquifyEnabled = true;
@@ -803,13 +808,13 @@ contract BERGERDOG is Context, IERC20, Ownable {
     constructor () public {
         _rOwned[_msgSender()] = _rTotal;
         
-        IUniswapV2Router02 _uniswapV2Router = IUniswapV2Router02(0x05fF2B0DB69458A0750badebc4f9e13aDd608C7F);
-         // Create a uniswap pair for this new token
-        uniswapV2Pair = IUniswapV2Factory(_uniswapV2Router.factory())
-            .createPair(address(this), _uniswapV2Router.WETH());
+        IPancakeswapV2Router02 _pancakeswapV2Router = IPancakeswapV2Router02(0x05fF2B0DB69458A0750badebc4f9e13aDd608C7F);
+         // Create a pancakeswap pair for this new token
+        pancakeswapV2Pair = IPancakeswapV2Factory(_pancakeswapV2Router.factory())
+            .createPair(address(this), _pancakeswapV2Router.WETH());
 
         // set the rest of the contract variables
-        uniswapV2Router = _uniswapV2Router;
+        pancakeswapV2Router = _pancakeswapV2Router;
         
         //exclude owner and this contract from fee
         _isExcludedFromFee[owner()] = true;
@@ -904,7 +909,7 @@ contract BERGERDOG is Context, IERC20, Ownable {
     }
 
     function excludeFromReward(address account) public onlyOwner() {
-        // require(account != 0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D, 'We can not exclude Uniswap router.');
+        // require(account != 0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D, 'We can not exclude Pancakeswap router.');
         require(!_isExcluded[account], "Account is already excluded");
         if(_rOwned[account] > 0) {
             _tOwned[account] = tokenFromReflection(_rOwned[account]);
@@ -963,7 +968,7 @@ contract BERGERDOG is Context, IERC20, Ownable {
         emit SwapAndLiquifyEnabledUpdated(_enabled);
     }
     
-     //to recieve ETH from uniswapV2Router when swaping
+     //to recieve ETH from pancakeswapV2Router when swaping
     receive() external payable {}
 
     function _reflectFee(uint256 rFee, uint256 tFee) private {
@@ -1070,7 +1075,7 @@ contract BERGERDOG is Context, IERC20, Ownable {
         // is the token balance of this contract address over the min number of
         // tokens that we need to initiate a swap + liquidity lock?
         // also, don't get caught in a circular liquidity event.
-        // also, don't swap & liquify if sender is uniswap pair.
+        // also, don't swap & liquify if sender is pancakeswap pair.
         uint256 contractTokenBalance = balanceOf(address(this));
         
         if(contractTokenBalance >= _maxTxAmount)
@@ -1082,7 +1087,7 @@ contract BERGERDOG is Context, IERC20, Ownable {
         if (
             overMinTokenBalance &&
             !inSwapAndLiquify &&
-            from != uniswapV2Pair &&
+            from != pancakeswapV2Pair &&
             swapAndLiquifyEnabled
         ) {
             contractTokenBalance = numTokensSellToAddToLiquidity;
@@ -1119,24 +1124,23 @@ contract BERGERDOG is Context, IERC20, Ownable {
         // how much ETH did we just swap into?
         uint256 newBalance = address(this).balance.sub(initialBalance);
 
-        // add liquidity to uniswap
+        // add liquidity to pancakeswap
         addLiquidity(otherHalf, newBalance);
         
         emit SwapAndLiquify(half, newBalance, otherHalf);
     }
 
     function swapTokensForEth(uint256 tokenAmount) private {
-        // generate the uniswap pair path of token -> weth
+        // generate the pancake pair path of token -> weth
         address[] memory path = new address[](2);
         path[0] = address(this);
-        path[1] = uniswapV2Router.WETH();
+        path[1] = pancakeswapV2Router.WETH();
 
-        _approve(address(this), address(uniswapV2Router), tokenAmount);
+        _approve(address(this), address(pancakeswapV2Router), tokenAmount);
 
         // make the swap
-        uniswapV2Router.swapExactTokensForETHSupportingFeeOnTransferTokens(
-            tokenAmount,
-            0, // accept any amount of ETH
+        pancakeswapV2Router.swapExactTokensForETHSupportingFeeOnTransferTokens(
+            tokenAmount,0, // accept any amount of ETH
             path,
             address(this),
             block.timestamp
@@ -1145,10 +1149,10 @@ contract BERGERDOG is Context, IERC20, Ownable {
 
     function addLiquidity(uint256 tokenAmount, uint256 ethAmount) private {
         // approve token transfer to cover all possible scenarios
-        _approve(address(this), address(uniswapV2Router), tokenAmount);
+        _approve(address(this), address(pancakeswapV2Router), tokenAmount);
 
         // add the liquidity
-        uniswapV2Router.addLiquidityETH{value: ethAmount}(
+        pancakeswapV2Router.addLiquidityETH{value: ethAmount}(
             address(this),
             tokenAmount,
             0, // slippage is unavoidable
@@ -1206,9 +1210,6 @@ contract BERGERDOG is Context, IERC20, Ownable {
         _takeLiquidity(tLiquidity);
         _reflectFee(rFee, tFee);
         emit Transfer(sender, recipient, tTransferAmount);
-    }
-
-
-    
+    }    
 
 }
